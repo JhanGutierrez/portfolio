@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+:root {
+  --white-color: #e0e5f0;
+  --black-color: #030303;
+  --gray-color-200: #2c2e33;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white-color);
+  background-color: var(--black-color);
+}
+
+/* #region navbar */
+.nav-item {
+  @apply block py-6 text-2xl font-bold text-gray-100 transition-colors duration-200 hover:text-white md:text-base;
+}
+
+.active-nav {
+  @apply text-white;
+}
+/* #endregion */
+
+/* #region skills */
+.pill {
+  @apply text-center text-gray-100 transition-colors duration-200 select-none after:rounded before:rounded gradient-hover w-fit hover:text-white;
+}
+
+.pill span {
+  @apply block p-2 text-xs tracking-widest bg-gray-300 rounded;
+}
+/* #endregion */
+
+/* GENERIC ELEMENTS */
+
+.layout {
+  @apply w-full max-w-screen-xl px-8 mx-auto;
+}
+
+/* #region input */
+.input {
+  @apply w-full p-3 transition-colors duration-200 bg-transparent border border-gray-200 rounded-lg outline-0 focus:border-main hover:border-gray-100;
+}
+/* #endregion */
+
+/* #region form-input */
+.form-input {
+  @apply mb-4;
+}
+
+.form-input label > span {
+  @apply block mb-1 text-gray-100;
+}
+/* #endregion */
+
+/* #region gradient-hover */
+.gradient-hover {
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-hover:hover::after {
+  opacity: 1;
+}
+
+.gradient-hover::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  height: calc(100% + 2px);
+  width: calc(100% + 2px);
+  background: var(--gray-color-200);
+  z-index: -2;
+}
+
+.gradient-hover::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  height: calc(100% + 2px);
+  width: calc(100% + 2px);
+  background-image: linear-gradient(
+    -45deg,
+    rgba(118, 184, 255, 1) 10%,
+    rgba(240, 134, 242, 1) 50%,
+    rgba(250, 195, 123, 1) 90%
+  );
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.2s;
+}
+/* #endregion */
+
+/* #region gradient-hover */
+.gradient-border {
+  z-index: 1;
+  position: relative;
+}
+
+.gradient-border::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  height: calc(100% + 2px);
+  width: calc(100% + 2px);
+  background-image: linear-gradient(
+    -45deg,
+    rgba(118, 184, 255, 1) 10%,
+    rgba(240, 134, 242, 1) 50%,
+    rgba(250, 195, 123, 1) 90%
+  );
+  z-index: -1;
+  transition: all 0.2s;
+}
+/* #endregion */
+
+/* #region buttons */
+.btn {
+  @apply block px-8 py-4 rounded-md cursor-pointer bg-main md:w-fit;
+}
+
+.btn_2 {
+  @apply block px-8 py-4 rounded-md cursor-pointer md:w-fit;
+}
+/* #endregion */
+
+/* #region title */
+.title h2 {
+  @apply text-5xl font-bold;
+}
+
+.title p:nth-child(2) {
+  @apply mt-2;
+}
+
+.title p {
+  @apply mb-4 text-gray-100;
+}
+
+.title p:last-child {
+  @apply last:mb-0;
+}
+/* #endregion */
+
+/* #region title-sm */
+.title-sm h3 {
+  @apply text-xl font-bold;
+}
+
+.title-sm p:nth-child(2) {
+  @apply mt-2;
+}
+
+.title-sm p {
+  @apply mb-4 text-gray-100;
+}
+
+.title-sm p:last-child {
+  @apply last:mb-0;
+}
+/* #endregion */

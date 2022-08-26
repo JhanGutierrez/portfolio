@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+    <div class="w-full min-h-screen">
+
+        <!-- HEADER -->
+        <header class="h-[700px] md:min-h-screen overflow-hidden relative" id="header">
+
+            <nav class="fixed z-40 w-full bg-black border-b border-gray-300 bg-opacity-60 backdrop-blur-md">
+                <div class="flex items-center justify-center layout">
+
+                    <!-- OPEN NAV -->
+                    <div id="open-navbar" class="py-4 cursor-pointer md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 stroke-white"
+                            width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <line x1="4" y1="6" x2="20" y2="6" />
+                            <line x1="4" y1="12" x2="20" y2="12" />
+                            <line x1="4" y1="18" x2="20" y2="18" />
+                        </svg>
+                    </div>
+
+                    <div
+                        class="absolute top-0 right-0 w-full h-screen p-4 overflow-y-auto transition-transform duration-200 ease-out bg-black md:bg-transparent md:relative md:h-fit md:p-0 translate-x-[-100%] md:translate-x-0">
+
+                        <!-- CLOSE NAV -->
+                        <div id="close-navbar"
+                            class="absolute top-0 right-0 z-50 block mt-6 mr-8 cursor-pointer md:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x stroke-white"
+                                width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        </div>
+
+                        <ul
+                            class="my-24 text-center md:my-0 md:p-0 md:gap-12 md:items-center md:flex md:justify-between">
+                            <li>
+                                <a href="#header" class="nav-item">
+                                    <!-- active-nav -->
+                                    Inicio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#about-me" class="nav-item">
+                                    Sobre mi
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#projects" class="nav-item">
+                                    Proyectos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact-me" class="nav-item">
+                                    Contácto
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+
+            <div class="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 layout top-1/2 left-1/2">
+                <p class="mb-4 text-xl">Hola, mi nombre es</p>
+                <h2 class="font-bold  text-4xl md:text-6xl lg:text-8xl leading-[1.2]">
+                    Jhan
+                    <br>
+                    Gutiérrez
+                </h2>
+                <p class="mt-4 text-xl text-gray-100">
+                    Soy desarrollador frontend
+                </p>
+                <a href="#about-me">
+                    <button class="mt-4 btn">Saber más</button>
+                </a>
+            </div>
+
+            <div class="absolute top-0 left-0 w-full h-screen">
+                <video src="./assets/videos/bg.mp4" class="object-cover w-full h-full" autoplay loop muted>
+                </video>
+            </div>
+        </header>
+
+        <main>
+
+            <!-- ABOUT ME -->
+            <section class="h-screen py-24 bg-gray-500" id="about-me">
+
+                <div class="grid items-center h-[calc(100vh-12rem)] gap-8 layout md:grid-cols-2">
+                    <!-- ME -->
+                    <div>
+                        <div class="title">
+                            <h2>Sobre mi</h2>
+                            <p>
+                                Soy una persona con ganas de aprender y de colaborar, en busca de nuevos retos que me
+                                ayuden
+                                a crecer como desarrollador.
+                            </p>
+
+                            <p>
+                                Me considero un autodidacta, apasionado por el mundo del desarrollo web, con el anhelo
+                                de
+                                ser un full stack.
+                            </p>
+
+                            <p>
+                                Actualmente me encuentro aprendiendo otras tecnologías como lo son node
+                                js, para potenciar tanto mis conocimientos como mis habilidades.
+                            </p>
+
+                            <p>
+                                También soy un apasionado por el desarrollo de videojuegos, por lo que en mis tiempos
+                                libres
+                                desarrollo mis propios videojuegos.
+                            </p>
+                        </div>
+
+                        <div class="after:rounded-full before:rounded-full gradient-border w-fit">
+                            <span
+                                class="flex items-center px-2 py-1 mt-4 text-xs text-white bg-gray-500 rounded-full w-fit">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="mr-1 icon icon-tabler icon-tabler-circle-check stroke-white" width="20"
+                                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <circle cx="12" cy="12" r="9" />
+                                    <path d="M9 12l2 2l4 -4" />
+                                </svg>
+                                Disponible
+                                para contratación
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- SKILLS -->
+                    <div class="w-full">
+
+                        <div class="title">
+                            <h2>Mis habilidades</h2>
+                        </div>
+
+                        <div class="w-full mt-2">
+                            <div class="flex flex-wrap gap-2">
+                                <div class="pill">
+                                    <span>HTML</span>
+                                </div>
+
+                                <div class="pill">
+                                    <span>CSS</span>
+                                </div>
+
+                                <div class="pill">
+                                    <span>Javascript</span>
+                                </div>
+
+                                <div class="pill">
+                                    <span>NodeJS</span>
+                                </div>
+
+                                <div class="pill">
+                                    <span>Laravel</span>
+                                </div>
+
+                                <div class="pill">
+                                    <span>Livewire</span>
+                                </div>
+
+                                <div class="pill">
+                                    <span>Angular</span>
+                                </div>
+
+                                <div class="pill">
+                                    <span>Bootstrap</span>
+                                </div>
+
+                                <div class="pill">
+                                    <span>Tailwindcss</span>
+                                </div>
+
+                                <div class="pill">
+                                    <span>Figma</span>
+                                </div>
+
+                                <div class="pill">
+                                    <span>Blender</span>
+                                </div>
+
+                                <div class="pill">
+                                    <span>Unity</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- PROJECTS -->
+            <section class="min-h-screen py-24" id="projects">
+
+                <div class="layout">
+
+                    <div class="mb-12 text-center title">
+                        <h2>Mis royectos</h2>
+                        <p>
+                            Esto son algunos de los trabajos que he realizado.
+                        </p>
+                    </div>
+
+                    <div class="grid items-center grid-cols-2 gap-8">
+                        <div>
+                            <video src="./assets/videos/ecommerce.mp4" controls
+                                class="object-cover w-full h-full rounded aspect-video"></video>
+                        </div>
+
+                        <div>
+                            <div class="title-sm">
+                                <h3>Ecommerce</h3>
+                                <p>Un proyecto desarrollado para la venta de productos de vestir,
+                                    utilizando laravel
+                                    como backend y frontend, y mysql como base de datos.</p>
+                            </div>
+
+                            <div class="mt-4 mb-2 title-sm">
+                                <h3>Teconologías utilizadas:</h3>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 pb-[2px]">
+                                <div class="pill">
+                                    <span>Laravel</span>
+                                </div>
+                                <div class="pill">
+                                    <span>Livewire</span>
+                                </div>
+                                <div class="pill">
+                                    <span>Tailwindcss</span>
+                                </div>
+                                <div class="pill">
+                                    <span>Javascript</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="grid items-center grid-cols-2 gap-8 mt-12">
+
+                        <div>
+                            <video src="./assets/videos/ecommerce.mp4" controls
+                                class="object-cover w-full h-full rounded aspect-video"></video>
+                        </div>
+
+                        <div>
+                            <div class="title-sm">
+                                <h3>Ecommerce</h3>
+                                <p>Un proyecto desarrollado para la venta de productos de vestir,
+                                    utilizando laravel
+                                    como backend y frontend, y mysql como base de datos.</p>
+                            </div>
+
+                            <div class="mt-4 mb-2 title-sm">
+                                <h3>Teconologías utilizadas:</h3>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 pb-[2px]">
+                                <div class="pill">
+                                    <span>Laravel</span>
+                                </div>
+                                <div class="pill">
+                                    <span>Livewire</span>
+                                </div>
+                                <div class="pill">
+                                    <span>Tailwindcss</span>
+                                </div>
+                                <div class="pill">
+                                    <span>Javascript</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </section>
+
+            <!-- CONTACT ME -->
+            <section class="min-h-screen py-24 bg-gray-500" id="contact-me">
+
+                <div class="grid items-center h-[calc(100vh-12rem)]  gap-8 layout md:grid-cols-2">
+
+                    <div class="title">
+                        <h2>Contáctame</h2>
+                        <p>
+                            Envíame un mensaje, déjame saber en qué estás trabajando.
+                        </p>
+                    </div>
+
+                    <form class="mt-12 md:mt-0" id="contact-form">
+
+                        <div class="form-input">
+                            <label for="first-name">
+                                <span>
+                                    Nombre
+                                    <span class="text-red-500"> *</span>
+                                </span>
+                                <input type="text" class="input" id="first-name" name="firstname">
+                            </label>
+                        </div>
+
+                        <div class="form-input">
+                            <label for="last-name">
+                                <span>
+                                    Apellido
+                                    <span class="text-red-500"> *</span>
+                                </span>
+                                <input type="text" class="input" id="last-name" name="lastname">
+                            </label>
+                        </div>
+
+                        <div class="form-input">
+                            <label for="email">
+                                <span>
+                                    Email
+                                    <span class="text-red-500"> *</span>
+                                </span>
+                                <input type="text" class="input" id="email" name="email">
+                            </label>
+                        </div>
+
+                        <div class="form-input">
+                            <label for="message">
+                                <span>
+                                    Mensaje
+                                    <span class="text-red-500"> *</span>
+                                </span>
+                                <textarea name="message" id="message" rows="4" class="block input"></textarea>
+                            </label>
+                        </div>
+
+                        <input type="submit" value="Enviar" class="btn">
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="pt-12 border-t border-gray-300">
+
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="./js/contact-form.js"></script>
+    <script src="./js/navbar.js"></script>
+
+</body>
+
+</html>
